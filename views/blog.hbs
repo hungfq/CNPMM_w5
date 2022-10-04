@@ -1,0 +1,19 @@
+<h1>Blogs</h1>
+{{#if blog }}
+<p>{{blog.title}}</p>
+<p>{{blog.content}}</p>
+<p>{{blog.description}}</p>
+{{else}}
+<p> The blog not exist</p>
+{{/if}}
+
+<h2> Comment</h2>
+{{#each comment}}
+<p>{{this.name}}: {{this.comment}}</p>
+{{/each}}
+
+<form id="addComment" method="post" action="/blog/{{{blog.id}}}">
+  <input name="name" type="text"></input>
+  <input name="comment" type="text"></input>
+  <input type="submit"></input>
+</form>

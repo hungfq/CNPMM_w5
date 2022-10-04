@@ -1,0 +1,11 @@
+<h1>Update Blogs</h1>
+{{#if blog }}
+<form id="myForm" method="post" action="/update/{{{blog.id}}}">
+  <input name="title" type="text" value="{{blog.title}}"></input>
+  <input name="description" type="text" value="{{blog.description}}"></input>
+  <input name="content" type="text" value="{{blog.content}}"></input>
+  <input type="submit"></input>
+</form>
+{{else}}
+<p> The blog not exist</p>
+{{/if}}

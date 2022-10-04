@@ -1,0 +1,15 @@
+<h3>Home page</h3>
+<div class="row mb-5">
+    {{#each blogs}}
+    <a class="col col-8" href="/blog/{{{this.id}}}">{{this.content}}</a>
+    <span class="col col-2"><a href="/update/{{{this.id}}}">Edit</a></span>
+    <span class="col col-2"><a href="/delete/{{{this.id}}}">Delete</a></span>
+    </br>
+    {{/each}}
+</div>
+<form id="myForm" class="row justify-content-between" method="post" action="/add">
+    <input class="col col-2" name="title" placeholder="Title" type="text"></input>
+    <input class="col col-4" name="description" placeholder="Description" type="text"></input>
+    <input class="col col-4" name="content" placeholder="Content" type="text"></input>
+    <input class="col col-1" type="submit"></input>
+</form>
